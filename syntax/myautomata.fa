@@ -1,13 +1,9 @@
-// Definición de un autómata finito
 Automata:
   Tipo: TipoAutomata
   Inicio: Estado
   Aceptacion: Estados
   Transiciones:
-    - Estado -> Estado: Input
-    - Estado -> {Estado}: Input
-    - Estado -> Estado: vacío
-    - Estado -> {Estado}: vacío
-
-TipoAutomata:
-  determinista | no_determinista
+      Estado -> Estado: Input
+      Estado -> {Estado}: Input
+      Estado -> Estado: vacio
+      Estado -> {Estado}: vacio
