@@ -1,0 +1,10 @@
+Automata:
+    Tipo: TipoAutomata
+    Inicio: Estado
+    Aceptacion: Estados
+    Transiciones:
+        Estado -> Estado: Input
+        Estado -> {Estado}: Input
+        Estado -> Estado: vacio
+        Estado -> {Estado}: vacio
+
