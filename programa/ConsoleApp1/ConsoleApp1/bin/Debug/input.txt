@@ -1,10 +1,18 @@
 Automata:
-    Tipo: TipoAutomata
-    Inicio: Estado
-    Aceptacion: Estados
-    Transiciones:
-        Estado -> Estado: Input
-        Estado -> {Estado}: Input
-        Estado -> Estado: vacio
-        Estado -> {Estado}: vacio
-
+  Tipo: determinista
+  Inicio: p0
+  Aceptacion: {p3, p4, p5}
+  Transiciones:
+      p0 -> p1: 0, 1
+      p1 -> p2: 0, 1
+      p2 -> p3: 0, 1
+      p3 -> p4: 0, 1
+      p4 -> p5: 0, 1
+      p5 -> p6: 0, 1
+      p6 -> p7: 0, 1
+      p7 -> p8: 0, 1
+      p8 -> p9: 0, 1
+      p9 -> pa: 1
+      p9 -> pr: 0
+      pa -> pa: 0, 1
+      pr -> pr: 0, 1
