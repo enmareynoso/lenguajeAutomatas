@@ -15,6 +15,7 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
+            string pathToFile = @args[0];
             //Setting the lexer and parser
             StreamReader str = new StreamReader(args[0]);
 
@@ -48,7 +49,14 @@ namespace ConsoleApp1
                    $"flechaInicio [label=\"\"]; \n\tnode [shape = doublecircle]; {estadosAceptacionString};  \n\tnode [shape = circle];" +
                    $"\n\tflechaInicio -> {visitor.estadoInicial};  {transitionsString}  \n}}";
 
-           //Test
+            //Creating the .dot file
+           StreamWriter sW = new StreamWriter(@"C:\Users\Kerlyn\source\repos\ConsoleApp1\ConsoleApp1\prueba.dot", false);
+           foreach(char x in automataDotFix)
+           {
+               sW.Write(x);
+           }
+           sW.Close();
+           //print the output
            Console.WriteLine(automataDotFix);
            Console.ReadLine();
         }
